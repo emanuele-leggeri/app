@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Girafiore Natura Artistica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Lobster|Revalia" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./assets/icon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon/favicon-16x16.png">
+        <link rel="manifest" href="./assets/icon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="./assets/icon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- jQuery & Bootstrap.js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/css/mobile.css">
+        <link rel="stylesheet" href="./assets/css/tablet.css">
+        <link rel="stylesheet" href="./assets/css/desktop.css">
+        <link rel="stylesheet" href="./assets/css/fonts.css">
+        
+        <style>
+            #home
+            {
+                min-height:100vh;
+                background-size: 100% 100% ;
+                -webkit-transition: all 2s ease-in-out;
+                -moz-transition: all 2s ease-in-out;
+                -ms-transition: all 2s ease-in-out;
+                -o-transition: all 2s ease-in-out;
+                transition: all 2s ease-in-out;
+            }
+            #backgrounder ul { display:none;}
+            #verydownbar
+            {
+                position:fixed;
+                bottom:0;
+                right:0;
+                left:0;
+                height:15vh;
+                line-height:15vh;
+                font-family: 'Jim Nightshade';
+            }
+            .blurred 
+            {
+                background:rgba(0,0,0,.6);
+                -webkit-filter: blur(5px);
+                -moz-filter: blur(5px);
+                -o-filter: blur(5px);
+                -ms-filter: blur(5px);
+                filter: blur(5px);
+            }
+            #downbar
+            {
+                position:fixed;
+                bottom:0;
+                right:0;
+                left:0;
+                height:15vh;
+                line-height:15vh;
+/*
+                background: rgb(255,255,255);
+                background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(147,147,147,1) 40%, rgba(147,147,147,1) 60%, rgba(246,246,246,1) 100%);
+                background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(147,147,147,1) 40%,rgba(147,147,147,1) 60%,rgba(246,246,246,1) 100%);
+                background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(147,147,147,1) 40%,rgba(147,147,147,1) 60%,rgba(246,246,246,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 );
+*/
+            }
+            
+            #infobox
+            {
+                position:fixed;
+                right:0;
+                bottom:15vh;
+                margin:1rem;
+                z-index:50;
+            }
+            #infobox a i , #menubox a i 
+            {
+                font-size:3rem;
+                color:white;
+            }
+            
+            #menubox 
+            {
+                position:fixed;
+                top:0;
+                right:0;
+                margin:1rem;
+                z-index:50;
+            }
+            #verydownbar .row div 
+            {
+                font-size:4rem;
+                color:white;
+                text-shadow: -2px 2px 3px black;
+            }
+            
+            #preloader
+            {
+                position:fixed;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                width:100%;
+                height:100%;
+                background:white;
+                /*background: white url('./assets/icon/android-icon-72x72.png') center center no-repeat;*/
+                z-index:999;
+            }
+            #preloader img
+            {
+                position:fixed;
+                top:47%;
+                left:47%;
+                transition: 1s all ease-in-out;
+                -moz-transition: 1s all ease-in-out;
+                -o-transition: 1s all ease-in-out;
+                -webkit-transition: 1s all ease-in-out;
+            }
+            
+            #menu
+            {
+                width:20vw;
+                position:fixed;
+                top:0;
+                right:0;
+                bottom:15vh;
+                z-index:40;
+                padding:1.2rem;
+                display:none;
+            }
+            #backmenu
+            {
+                width:20vw;
+                position:fixed;
+                top:0;
+                right:0;
+                bottom:15vh;
+                z-index:39;  
+                margin:0;
+                display:none;
+            }
+        </style>
+        <script src="./assets/js/events.js"></script>
+    </head>
+    <body>
+        <div id="preloader">
+            <img id="preloader-img" src="./assets/icon/android-icon-72x72.png">
+        </div>
+        
+        
+        <div id="home" class="container-fluid">
+            <div id="backgrounder">
+                <ul id="backgrounds">
+                    <li>_DSC2734.jpg</li>
+                    <li>_DSC2594.jpg</li>
+                </ul>
+            </div>
+        </div>
+        <div id="downbar" class="container-fluid blurred">
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="sr-only">BACKGROUND-BLURRED</span>
+                </div>
+            </div>
+        </div>
+        <div id="verydownbar" class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    Girafiore <img src="./assets/icon/apple-icon-57x57.png"> naturArtistica
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- sFixedButtons -->
+            <!-- sInfoBox -->
+                <div id="infobox">
+                    <a href="#">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
+            <!-- eInfoBox -->
+            <!-- sMenuBox -->
+                <div id="menubox">
+                    <a href="#">
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>    
+                    </a>
+                </div>
+            <!-- eMenuBox -->
+            <!-- sMenu -->
+                
+                <div id="backmenu" class="blurred">
+                    <span class="sr-only">BACKGROUND BLURRED MENU</span>
+                </div>
+        
+                <div id="menu">
+                    <h1>Girafiore <img src="./assets/icon/android-icon-36x36.png"></h1>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            
+            <!-- eMenu -->
+        <!-- eFixedButtons -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>
